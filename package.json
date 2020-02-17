@@ -1,0 +1,36 @@
+{
+  "name": "tslint-to-eslint",
+  "version": "1.0.0",
+  "description": "Project demonstrating migrating to eslint from tslint for your TypeScript projects",
+  "main": "index.js",
+  "scripts": {
+    "lint": "tslint --fix './src/**/*.ts'",
+    "format": "prettier --write 'src/**/*.ts'",
+    "prebuild": "npm run lint && npm run format",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kevinbgreene/tslint-to-eslint.git"
+  },
+  "keywords": [
+    "TypeScript",
+    "eslint",
+    "tslint",
+    "JavaScript"
+  ],
+  "author": "Kevin Greene <hightimesteddy@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinbgreene/tslint-to-eslint/issues"
+  },
+  "homepage": "https://github.com/kevinbgreene/tslint-to-eslint#readme",
+  "devDependencies": {
+    "prettier": "^1.19.1",
+    "tslint": "^6.0.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.1.0",
+    "typescript": "^3.7.5"
+  }
+}
