@@ -4,7 +4,7 @@
   "description": "Project demonstrating migrating to eslint from tslint for your TypeScript projects",
   "main": "index.js",
   "scripts": {
-    "lint": "tslint --fix './src/**/*.ts'",
+    "lint": "eslint --fix './src/**/*.ts'",
     "format": "prettier --write 'src/**/*.ts'",
     "prebuild": "npm run lint && npm run format",
     "build": "tsc",
@@ -27,10 +27,12 @@
   },
   "homepage": "https://github.com/kevinbgreene/tslint-to-eslint#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "@typescript-eslint/parser": "^2.20.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
     "prettier": "^1.19.1",
-    "tslint": "^6.0.0",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-plugin-prettier": "^2.1.0",
     "typescript": "^3.7.5"
   }
 }
